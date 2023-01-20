@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import Axios from "axios";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCloseCircle, AiFillGithub } from "react-icons/ai";
 
 function App() {
   const [endPoint, setEndPoint] = useState("");
@@ -96,12 +96,21 @@ function App() {
       <footer
         className={` fixed bottom-0 w-full ${hideFooter ? "hidden" : ""}`}
       >
-        <div className="  flex justify-between items-center md:px-40 md:py-5 bg-gradient-to-r from-[#4B79A1] to-[#283E51]">
+        <div className="  flex justify-around items-center md:px-40 md:py-5 bg-gradient-to-r from-[#4B79A1] to-[#283E51]">
           <p className=" mx-5 text-xs w-52 md:text-base md:w-auto">
             Note: This is a free API, so it can only be fetched 500 times a
             month!
           </p>
-          <p className=" mx-5 text-xs md:text-base">Made by Gopesh Goswami</p>
+          {/* <p className=" mx-5 text-xs md:text-base">Made by Gopesh Goswami</p> */}
+          <a
+            href="https://github.com/GopeshGoswami/api-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" flex items-center gap-2 justify-center"
+          >
+            Source Code:
+            <AiFillGithub className=" text-3xl hover:text-black duration-300 ease-in-out" />
+          </a>
           <button
             className=" absolute right-[0.7rem] bottom-10"
             onClick={closeFooter}
